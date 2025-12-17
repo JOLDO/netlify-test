@@ -6,7 +6,7 @@
   <title>자기소개</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
-    :root {
+    :root { /*전역 변수 var(--bg)이런식으로 사용*/
       --bg: #0f172a;
       --card: #020617;
       --primary: #38bdf8;
@@ -14,14 +14,14 @@
       --muted: #94a3b8;
     }
 
-    * {
+    * { /*모든 클래스에 적용*/
       margin: 0;
       padding: 0;
       box-sizing: border-box;
       font-family: "Pretendard", "Apple SD Gothic Neo", sans-serif;
     }
 
-    body {
+    body {  /*body의 속성을 바꾸는 건데 원래 있는 거라 앞에 .이 없음*/
       min-height: 100vh;
       background: radial-gradient(circle at top, #1e293b, var(--bg));
       display: flex;
@@ -30,7 +30,8 @@
       color: var(--text);
     }
 
-    .card {
+    .card { /*card는 임의로 만든 클래스라서 .을 찍음*/
+      /*opacity: 0.5;*/
       width: 100%;
       max-width: 720px;
       background: linear-gradient(180deg, #020617, #020617cc);
@@ -39,9 +40,15 @@
       padding: 40px;
       box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
       animation: fadeIn 0.8s ease-out;
+      /*animation: asdfg 3s linear;*/
+      /*
+      정의한 애니메이션이름,지속시간,움직임방식,횟수
+      ease-out은 처음에 빠르고 느려짐, ease-in 처음 느리고 빨라짐, ease-in-out 중간에만 빨라짐, linear은 일정한 속도
+      이것들 뒤에는 infinite를 붙여 무한 반복 가능
+      */
     }
 
-    @keyframes fadeIn {
+    @keyframes fadeIn { /*@keyframes는 애니메이션 적용 및 상태를 정의*/
       from {
         opacity: 0; /*투명도*/
         transform: translateY(20px);  /*카드 표시될곳 20아래*/
@@ -53,7 +60,22 @@
       }
     }
 
-    h1 {
+    @keyframes asdfg {
+      0% {
+        opacity: 0;
+      }
+      
+      50% {
+        opacity: 1;
+      }
+
+      100% {
+        opacity: 0.5;
+      }
+    }
+
+
+    h1 {  /*전체 h1에서 사용*/
       font-size: 2.4rem;
       font-weight: 800;
       margin-bottom: 10px;
@@ -70,7 +92,7 @@
       margin-top: 28px;
     }
 
-    .section h2 {
+    .section h2 { /*section내부에서 사용하는 h2에만 적용*/
       font-size: 1.2rem;
       margin-bottom: 12px;
       color: var(--primary);
