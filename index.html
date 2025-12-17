@@ -1,11 +1,178 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <title>자기소개</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: #020617;
+      --primary: #38bdf8;
+      --text: #e5e7eb;
+      --muted: #94a3b8;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Pretendard", "Apple SD Gothic Neo", sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background: radial-gradient(circle at top, #1e293b, var(--bg));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text);
+    }
+
+    .card {
+      width: 100%;
+      max-width: 720px;
+      background: linear-gradient(180deg, #020617, #020617cc);
+      border: 1px solid #1e293b;
+      border-radius: 20px;
+      padding: 40px;
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
+      animation: fadeIn 0.8s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    h1 {
+      font-size: 2.4rem;
+      font-weight: 800;
+      margin-bottom: 10px;
+      letter-spacing: -0.02em;
+    }
+
+    .subtitle {
+      color: var(--primary);
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+    }
+
+    .section {
+      margin-top: 28px;
+    }
+
+    .section h2 {
+      font-size: 1.2rem;
+      margin-bottom: 12px;
+      color: var(--primary);
+    }
+
+    .section p,
+    .section li {
+      line-height: 1.7;
+      color: var(--text);
+      font-size: 1rem;
+    }
+
+    ul {
+      padding-left: 18px;
+    }
+
+    li {
+      margin-bottom: 6px;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .tag {
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: #020617;
+      border: 1px solid #1e293b;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    .footer {
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid #1e293b;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .links a {
+      color: var(--primary);
+      text-decoration: none;
+      margin-left: 16px;
+    }
+
+    .links a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
-    <h1>자기소개</h1>
+  <div class="card">
+    <h1>안녕하세요, 👋<br />저는 홍길동입니다</h1>
+    <div class="subtitle">Backend Developer · Infra · Problem Solver</div>
+
+    <div class="section">
+      <h2>소개</h2>
+      <p>
+        안정적인 시스템과 깔끔한 구조를 좋아하는 백엔드 개발자입니다.
+        “왜 이렇게 동작하는가?”를 끝까지 파고드는 스타일이며,
+        단순한 구현보다 <strong>운영에서 살아남는 코드</strong>를 중요하게 생각합니다.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>기술 스택</h2>
+      <div class="tags">
+        <span class="tag">Java</span>
+        <span class="tag">Spring Boot</span>
+        <span class="tag">Node.js</span>
+        <span class="tag">MySQL</span>
+        <span class="tag">Redis</span>
+        <span class="tag">Nginx</span>
+        <span class="tag">Docker</span>
+        <span class="tag">Linux</span>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>경험 & 관심사</h2>
+      <ul>
+        <li>트래픽 증가 상황에서의 서버 튜닝 및 장애 대응</li>
+        <li>REST API 및 인증/인가 설계</li>
+        <li>nginx, keep-alive, graceful shutdown 동작 분석</li>
+        <li>자동화와 반복 제거에 집착</li>
+      </ul>
+    </div>
+
+    <div class="footer">
+      <div>📧 email@example.com</div>
+      <div class="links">
+        <a href="#">GitHub</a>
+        <a href="#">Blog</a>
+        <a href="#">LinkedIn</a>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
