@@ -43,13 +43,13 @@
 
     @keyframes fadeIn {
       from {
-        opacity: 0;
-        transform: translateY(20px);
+        opacity: 0; /*투명도*/
+        transform: translateY(20px);  /*카드 표시될곳 20아래*/
       }
 
       to {
         opacity: 1;
-        transform: translateY(0);
+        transform: translateY(0); /*카드 표시될곳*/
       }
     }
 
@@ -75,6 +75,10 @@
       margin-bottom: 12px;
       color: var(--primary);
     }
+
+    /* .section h2::first-letter {
+      color: red;
+    } */
 
     .section p,
     .section li {
@@ -118,15 +122,26 @@
       color: var(--muted);
     }
 
+    .email {
+      color: white;
+      font-weight: bold;
+      font-style: italic;
+    }
+
     .links a {
       color: var(--primary);
       text-decoration: none;
       margin-left: 16px;
     }
 
-    .links a:hover {
+    .links a:hover {  /*:는 상태를 나타내고 의사 클래스라고 함*/
       text-decoration: underline;
     }
+
+    .links a::before {  /*::는 요소의 특정부분을 나타내고 의사 요소라고 함*/
+      content: "👉 "
+    }
+
   </style>
 </head>
 
@@ -161,7 +176,7 @@
     </div>
 
     <div class="footer">
-      <div>📧 bbat115@gmail.com</div>
+      <div class="email">📧 bbat115@gmail.com</div>
       <div class="links">
         <a href="1.html">눌러봐</a>
         <a 
