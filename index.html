@@ -6,7 +6,7 @@
   <title>자기소개</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
-    :root { /*전역 변수 var(--bg)이런식으로 사용*/
+    :root { /* 전역 변수 var(--bg)이런식으로 사용 */
       --bg: #0f172a;
       --card: #020617;
       --primary: #38bdf8;
@@ -14,14 +14,14 @@
       --muted: #94a3b8;
     }
 
-    * { /*모든 클래스에 적용*/
+    * { /* 모든 클래스에 적용 */
       margin: 0;
       padding: 0;
       box-sizing: border-box;
       font-family: "Pretendard", "Apple SD Gothic Neo", sans-serif;
     }
 
-    body {  /*body의 속성을 바꾸는 건데 원래 있는 거라 앞에 .이 없음*/
+    body {  /* body의 속성을 바꾸는 건데 원래 있는 거라 앞에 .이 없음 */
       min-height: 100vh;
       background: radial-gradient(circle at top, #1e293b, var(--bg));
       display: flex;
@@ -30,8 +30,8 @@
       color: var(--text);
     }
 
-    .card { /*card는 임의로 만든 클래스라서 .을 찍음*/
-      /*opacity: 0.5;*/
+    .card { /* card는 임의로 만든 클래스라서 .을 찍음 */
+      /* opacity: 0.5; */
       width: 100%;
       max-width: 720px;
       background: linear-gradient(180deg, #020617, #020617cc);
@@ -40,7 +40,7 @@
       padding: 40px;
       box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
       animation: fadeIn 0.8s ease-out;
-      /*animation: asdfg 3s linear;*/
+      /* animation: asdfg 3s linear; */
       /*
       정의한 애니메이션이름,지속시간,움직임방식,횟수
       ease-out은 처음에 빠르고 느려짐, ease-in 처음 느리고 빨라짐, ease-in-out 중간에만 빨라짐, linear은 일정한 속도
@@ -48,15 +48,15 @@
       */
     }
 
-    @keyframes fadeIn { /*@keyframes는 애니메이션 적용 및 상태를 정의*/
+    @keyframes fadeIn { /* @keyframes는 애니메이션 적용 및 상태를 정의 */
       from {
-        opacity: 0; /*투명도*/
-        transform: translateY(20px);  /*카드 표시될곳 20아래*/
+        opacity: 0; /* 투명도 */
+        transform: translateY(20px);  /* 카드 표시될곳 20아래 */
       }
 
       to {
         opacity: 1;
-        transform: translateY(0); /*카드 표시될곳*/
+        transform: translateY(0); /* 카드 표시될곳 */
       }
     }
 
@@ -75,7 +75,7 @@
     }
 
 
-    h1 {  /*전체 h1에서 사용*/
+    h1 {  /* 전체 h1에서 사용 */
       font-size: 2.4rem;
       font-weight: 800;
       margin-bottom: 10px;
@@ -92,15 +92,17 @@
       margin-top: 28px;
     }
 
-    .section h2 { /*section내부에서 사용하는 h2에만 적용*/
+    .section h2 { /* section내부에서 사용하는 h2에만 적용 */
       font-size: 1.2rem;
       margin-bottom: 12px;
       color: var(--primary);
     }
 
-    /* .section h2::first-letter {
+    /*
+    .section h2::first-letter {
       color: red;
-    } */
+    }
+    */
 
     .section p,
     .section li {
@@ -156,11 +158,11 @@
       margin-left: 16px;
     }
 
-    .links a:hover {  /*:는 상태를 나타내고 의사 클래스라고 함*/
+    .links a:hover {  /* :는 상태를 나타내고 의사 클래스라고 함 */
       text-decoration: underline;
     }
 
-    .links a::before {  /*::는 요소의 특정부분을 나타내고 의사 요소라고 함*/
+    .links a::before {  /* ::는 요소의 특정부분을 나타내고 의사 요소라고 함 */
       content: "👉 "
     }
 
